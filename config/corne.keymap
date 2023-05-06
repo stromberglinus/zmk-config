@@ -2,11 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-/* Swedish letters */
-#define sv_ae ZMK_KC_U(0x00E5)
-#define sv_ao ZMK_KC_U(0x00E4)
-#define sv_oe ZMK_KC_U(0x00F6)
-
 / {
 
   keymap {
@@ -36,10 +31,10 @@
                         //                      [     ][Enter][Space]      [ Home ][  End ][ Layer3 ]
 
                         bindings = <
-                        &kp TAB &kp sv_ae &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none                   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 
-                        &kp LEFT_SHIFT &kp sv_ao &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none 
-                        &kp LEFT_CONTROL &kp sv_oe &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none          &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 
-                                                                &none &kp RETURN &kp SPACE               &kp Home &kp End &mo 3
+                        &kp TAB &none &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none                   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 
+                        &kp LEFT_SHIFT &none &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none 
+                        &kp LEFT_CONTROL &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none          &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 
+                                                                &none &kp RETURN &kp SPACE           &kp Home &kp End &mo 3
                         >;
                 };
 
