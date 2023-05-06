@@ -26,7 +26,7 @@
         // [ Tab ][  Q  ][  W  ][  E  ][  R  ][  T  ]      [  Y  ][  U  ][  I  ][  O  ][  P  ][ Esc ]
         // [LSft ][  A  ][  S  ][  D  ][  F  ][  G  ]      [  H  ][  J  ][  K  ][  L  ][  ;  ][  '  ]
         // [L Ctrl][  Z  ][  X  ][  C  ][  V  ][  B  ]     [  N  ][  M  ][  ,  ][  .  ][  /  ][L Alt]
-                                  [Lower][Space][Enter]    [Bkspc][ Del ][Raise]
+        //                        [Lower][Space][Enter]    [Bkspc][ Del ][Raise]
 
 
       bindings = <
@@ -41,7 +41,7 @@
         // [ Tab ][     ][  7  ][  8  ][  9  ][     ]      [     ][ F9  ][ F10 ][ F11 ][ F12 ][ Esc ]
         // [LSft ][     ][  4  ][  5  ][  6  ][  0  ]      [     ][ F5  ][ F6  ][ F7  ][ F8  ][     ]
         // [L Ctrl][     ][  1  ][  2  ][  3  ][     ]     [     ][ F1  ][ F2  ][ F3  ][ F4  ][L Alt]
-                                [Base ][Space][Enter]     [Bkspc][ Del ][Raise]
+        //                        [Base ][Space][Enter]     [Bkspc][ Del ][Raise]
 
       bindings = <
         &kp TAB &none &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none                      &none &kp F9 &kp F10 &kp F11 &kp F12 &kp ESCAPE 
@@ -55,7 +55,7 @@
         // [ Tab ][  ?  ][  ~  ][  #  ][  $  ][  (  ]      [  )  ][  &  ][  -  ][  _  ][  ^  ][ Esc ]
         // [LSft ][  !  ][  @  ][  #  ][  %  ][  {  ]      [  }  ][  *  ][  +  ][  =  ][  :  ][  "  ]
         // [L Ctrl][  \  ][  |  ][     ][  <  ][  [  ]     [  ]  ][  >  ][     ][     ][  /  ][L Alt]
-                                [Base ][Space][Enter]     [Bkspc][ Del ][Layer4]
+        //                       [Base ][Space][Enter]     [Bkspc][ Del ][Layer4]
 
       bindings = <
         &kp TAB &kp QUESTION &kp TILDE &kp HASH &kp DOLLAR &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS &kp AMPERSAND &kp MINUS &kp UNDERSCORE &kp CARET &kp ESCAPE 
@@ -69,7 +69,7 @@
         //[HM Undef. Tab][     ][     ][     ][     ][     ][HM Undef. Home]      [HM Undef. End][     ][     ][     ][     ]
         //[HM Undef. K_Lock][     ][     ][     ][Reset ][     ]                  [     ][     ][     ][     ][     ][     ]
         //[     ][     ][     ][     ][     ][     ]      [     ]                 [     ][     ][     ][     ][     ]
-                                                [Base ][     ][     ]             [     ][     ][     ]
+        //                                        [Base ][     ][     ]           [     ][     ][     ]
 
       bindings = <
         &hm undefined TAB &none &none &none &none &hm undefined HOME    &hm undefined END &none &none &none &none 
