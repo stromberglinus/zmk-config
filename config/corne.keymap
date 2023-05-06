@@ -40,13 +40,13 @@
                 // [ Tab ][     ][  7  ][  8  ][  9  ][     ]      [     ][ F9  ][ F10 ][ F11 ][ F12 ][ Esc ]
                 // [LSft ][     ][  4  ][  5  ][  6  ][  0  ]      [     ][ F5  ][ F6  ][ F7  ][ F8  ][     ]
                 // [L Ctrl][     ][  1  ][  2  ][  3  ][     ]     [     ][ F1  ][ F2  ][ F3  ][ F4  ][L Alt]
-                //                        [Base ][Space][Enter]     [Bkspc][ Del ][Raise]
+                //                        [     ][Space][Enter]     [Bkspc][ Del ][     ]
 
         bindings = <
                 &kp TAB &none &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none                      &none &kp F9 &kp F10 &kp F11 &kp F12 &kp ESCAPE 
                 &kp LEFT_SHIFT &none &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0        &none &kp F5 &kp F6 &kp F7 &kp F8 &none 
                 &kp LEFT_CONTROL &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none             &none &kp F1 &kp F2 &kp F3 &kp F4 &kp LEFT_ALT 
-                                                        &mo BASE &kp SPACE &kp RETURN           &kp BACKSPACE &kp DEL &mo RAISE 
+                                                        &none &kp SPACE &kp RETURN              &kp BACKSPACE &kp DEL &none
         >;
         };
 
@@ -54,13 +54,13 @@
                 // [ Tab ][  ?  ][  ~  ][  #  ][  $  ][  (  ]      [  )  ][  &  ][  -  ][  _  ][  ^  ][ Esc ]
                 // [LSft ][  !  ][  @  ][  #  ][  %  ][  {  ]      [  }  ][  *  ][  +  ][  =  ][  :  ][  "  ]
                 // [L Ctrl][  \  ][  |  ][     ][  <  ][  [  ]     [  ]  ][  >  ][     ][     ][  /  ][L Alt]
-                //                       [Base ][Space][Enter]     [Bkspc][ Del ][     ]
+                //                       [     ][Space][Enter]     [Bkspc][ Del ][     ]
 
         bindings = <
                 &kp TAB &kp QUESTION &kp TILDE &kp HASH &kp DOLLAR &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS &kp AMPERSAND &kp MINUS &kp UNDERSCORE &kp CARET &kp ESCAPE 
                 &kp LEFT_SHIFT &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp PERCENT &kp LEFT_BRACE  &kp RIGHT_BRACE &kp ASTERISK &kp PLUS &kp EQUAL &kp COLON &kp DOUBLE_QUOTES 
                 &kp LEFT_CONTROL &kp BACKSLASH &kp PIPE &none &kp LT &kp LEFT_BRACKET           &kp RIGHT_BRACKET &kp GT &none &none &kp SLASH &kp LEFT_ALT 
-                                                        &mo BASE &kp SPACE &kp RETURN           &kp BACKSPACE &kp DEL &none 
+                                                        &none &kp SPACE &kp RETURN              &kp BACKSPACE &kp DEL &none 
         >;
         };
   };
