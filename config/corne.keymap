@@ -3,9 +3,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 /* Swedish letters */
-#define ZMK_UNICODE_PAIR(sv_ae,   N0, N0,  E, N4,   N0, N0,  C, N4)
-#define ZMK_UNICODE_PAIR(sv_ao,   N0, N0,  E, N5,   N0, N0,  C, N5)
-#define ZMK_UNICODE_PAIR(sv_oe,   N0, N0,  F, N6,   N0, N0,  D, N6)
+#define sv_ae ZMK_KC_U(0x00E5)
+#define sv_ao ZMK_KC_U(0x00E4)
+#define sv_oe ZMK_KC_U(0x00F6)
 
 
   keymap {
