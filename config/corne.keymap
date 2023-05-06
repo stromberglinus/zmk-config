@@ -7,6 +7,7 @@
 #define sv_ao ZMK_KC_U(0x00E4)
 #define sv_oe ZMK_KC_U(0x00F6)
 
+/ {
 
   keymap {
     compatible = "zmk,keymap";
