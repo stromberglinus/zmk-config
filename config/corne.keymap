@@ -38,9 +38,9 @@
                         //                      [     ][Enter][Space]      [ Home ][  End ][ Layer3 ]
 
                         bindings = <
-                        &kp TAB &custom_tap_shift A_RING &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none                        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 
-                        &kp LEFT_SHIFT &custom_tap_shift A_DIAERESIS &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none 
-                        &kp LEFT_CONTROL &custom_tap_shift O_DIAERESIS &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none          &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 
+                        &kp TAB &custom_tap_shift<A_RING> &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none                        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 
+                        &kp LEFT_SHIFT &custom_tap_shift<A_DIAERESIS> &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none 
+                        &kp LEFT_CONTROL &custom_tap_shift<O_DIAERESIS> &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none          &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 
                                                                 &none &kp RETURN &kp SPACE                                   &kp Home &kp End &mo3
                         >;
                 };
