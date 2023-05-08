@@ -55,17 +55,17 @@
 
                 Layer_3 {
                         // -------------------------------------------------------------------------------------------------
-                        // [BTCLR][  Q  ][  W  ][  E  ][  R  ][ BT1 ]      [  Y  ][  U  ][  I  ][  O  ][  P  ][Windows]
-                        // [BTNXT][  A  ][  S  ][  D  ][  F  ][ BT2 ]      [  H  ][  J  ][  K  ][  L  ][ ; : ][ ' " ]
-                        // [BTPRV][  Z  ][  X  ][  C  ][  V  ][ BT3 ]      [  N  ][  M  ][ , < ][ . > ][ / ? ][L Alt]
-                        //                       [    ][Enter][Space]      [Bkspc][ Del ][    ]
+                        // [ BTCLR ][ BT1 ][ BT2 ][ BT3 ][  R  ][     ]      [  Y  ][  U  ][  I  ][  O  ][  P  ][Windows]
+                        // [       ][  A  ][  S  ][  D  ][  F  ][     ]      [  H  ][  J  ][  K  ][  L  ][ ; : ][ ' " ]
+                        // [OUTBLE][OUTUSB][  X  ][  C  ][  V  ][     ]      [  N  ][  M  ][ , < ][ . > ][ / ? ][L Alt]
+                        //                         [    ][Enter][Space]      [Bkspc][ Del ][    ]
 
 
                         bindings = <
-                        &bt BT_CLR &kp Q &kp W &kp E &kp R &bt BT_SEL 1   &kp Y &kp U &kp I &kp O &kp P &kp LEFT_GUI 
-                        &bt BT_NXT &kp A &kp S &kp D &kp F &bt BT_SEL 2   &kp H &kp J &kp K &kp L &kp SEMI  &kp SQT 
-                        &bt BT_PRV &kp Z &kp X &kp C &kp V &bt BT_SEL 3   &kp N &kp M &kp COMMA &kp DOT  &kp FSLH  &kp LEFT_ALT 
-                                             &none &kp RETURN &kp SPACE   &kp BACKSPACE &kp DEL &none 
+                        &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp R &none   &kp Y &kp U &kp I &kp O &kp P &kp LEFT_GUI 
+                        &none &kp A &kp S &kp D &kp F &none                             &kp H &kp J &kp K &kp L &kp SEMI  &kp SQT 
+                        &out OUT_BLE &out OUT_USB &kp X &kp C &kp V &none               &kp N &kp M &kp COMMA &kp DOT  &kp FSLH  &kp LEFT_ALT 
+                                             &none &kp RETURN &kp SPACE                 &kp BACKSPACE &kp DEL &none 
                         >;
                 };
         };
