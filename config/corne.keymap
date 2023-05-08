@@ -5,6 +5,29 @@
 
 / {
 
+     macros {
+    // Lowercase characters
+    swedish_ae: swedish_ae {
+      label = "ZM_swedish_ae";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp A &kp E>;
+    };
+
+    swedish_ao: swedish_ao {
+      label = "ZM_swedish_ao";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp A &kp O>;
+    };
+
+    swedish_oe: swedish_oe {
+      label = "ZM_swedish_oe";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp O &kp E>;
+    };    
+
   keymap {
     compatible = "zmk,keymap";
 
@@ -32,9 +55,9 @@
                         //                      [     ][Enter][Space]      [ Home ][  End ][ Layer3 ]
 
                         bindings = <
-                        &kp TAB &none &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none                   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 
-                        &kp LEFT_SHIFT &none &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none 
-                        &kp LEFT_CONTROL &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none          &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 
+                        &kp TAB &swedish_ae &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none                   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 
+                        &kp LEFT_SHIFT &swedish_ao &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none 
+                        &kp LEFT_CONTROL &swedish_oe &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none          &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 
                                                                 &none &kp RETURN &kp SPACE           &kp HOME &kp END &mo 3
                         >;
                 };
