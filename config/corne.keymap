@@ -5,29 +5,6 @@
 
 / {
 
-     macros {
-    // Lowercase characters
-    swedish_ae: swedish_ae {
-      label = "ZM_swedish_ae";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp A &kp RING >;
-    };
-
-    swedish_ao: swedish_ao {
-      label = "ZM_swedish_ao";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp A &kp DIAERESIS>;
-    };
-
-    swedish_oe: swedish_oe {
-      label = "ZM_swedish_oe";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp O &kp DIAERESIS>;
-    };    
-
   keymap {
     compatible = "zmk,keymap";
 
@@ -49,15 +26,15 @@
 
                 Lower_layer {
                         // -------------------------------------------------------------------------------------------------
-                        // [ Tab ][  å  ][  7  ][  8  ][  9  ][     ]      [  F1  ][  F2  ][  F3 ][ F4  ][ F5  ][ F6  ]
-                        // [LSft ][  ä  ][  4  ][  5  ][  6  ][  0  ]      [ LEFT ][ DOWN ][RIGHT][  UP ][     ][     ]
-                        // [LCtrl][  ö  ][  1  ][  2  ][  3  ][     ]      [  F7  ][ F8   ][ F9  ][ F10 ][ F11 ][ F12 ]
+                        // [ Tab ][     ][  7  ][  8  ][  9  ][     ]      [  F1  ][  F2  ][  F3 ][ F4  ][ F5  ][ F6  ]
+                        // [LSft ][     ][  4  ][  5  ][  6  ][  0  ]      [ LEFT ][ DOWN ][RIGHT][  UP ][     ][     ]
+                        // [LCtrl][     ][  1  ][  2  ][  3  ][     ]      [  F7  ][ F8   ][ F9  ][ F10 ][ F11 ][ F12 ]
                         //                      [     ][Enter][Space]      [ Home ][  End ][ Layer3 ]
 
                         bindings = <
-                        &kp TAB &swedish_ao &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none                   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 
-                        &kp LEFT_SHIFT &swedish_ae &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none 
-                        &kp LEFT_CONTROL &swedish_oe &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none          &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 
+                        &kp TAB &none &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none                   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 
+                        &kp LEFT_SHIFT &none &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none 
+                        &kp LEFT_CONTROL &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none          &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 
                                                                 &none &kp RETURN &kp SPACE           &kp HOME &kp END &mo 3
                         >;
                 };
@@ -79,17 +56,17 @@
 
                 Layer_3 {
                         // -------------------------------------------------------------------------------------------------
-                        // [ Tab ][ BTCLR ][ BT0 ][ BT1 ][ BT2 ][ BT3 ]      [  Y  ][  U  ][  I  ][  O  ][  P  ][Windows]
-                        // [LSft ][       ][     ][     ][     ][BTNXT]      [  H  ][  J  ][  K  ][  L  ][ ; : ][ ' " ]
-                        // [LCtrl][OUTBLE][OUTUSB][     ][     ][     ]      [  N  ][  M  ][ , < ][ . > ][ / ? ][L Alt]
+                        // [ Tab ][ BTCLR ][ BT0 ][ BT1 ][ BT2 ][ BT3 ]      [     ][     ][     ][     ][     ][Windows]
+                        // [LSft ][       ][     ][     ][     ][BTNXT]      [     ][     ][     ][  L  ][     ][     ]
+                        // [LCtrl][OUTBLE][OUTUSB][     ][     ][     ]      [     ][     ][     ][     ][     ][L Alt]
                         //                         [    ][Enter][Space]      [Bkspc][ Del ][    ]
 
 
                         bindings = <
-                        &kp TAB &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3     &kp Y &kp U &kp I &kp O &kp P &kp LEFT_GUI 
-                        &kp LEFT_SHIFT &none &none &none &none &bt BT_NXT                                     &kp H &kp J &kp K &kp L &kp SEMI  &kp SQT 
-                        &kp LEFT_CONTROL &out OUT_BLE &out OUT_USB &none &none &none                       &kp N &kp M &kp COMMA &kp DOT  &kp FSLH  &kp LEFT_ALT 
-                                             &none &kp RETURN &kp SPACE                         &kp BACKSPACE &kp DEL &none 
+                        &kp TAB &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3     &none &none &none &none &none &kp LEFT_GUI 
+                        &kp LEFT_SHIFT &none &none &none &none &bt BT_NXT                          &none &none &none &kp L &none  &none 
+                        &kp LEFT_CONTROL &out OUT_BLE &out OUT_USB &none &none &none               &none &none &none &none  &none  &kp LEFT_ALT 
+                                             &none &kp RETURN &kp SPACE                            &kp BACKSPACE &kp DEL &none 
                         >;
                 };
         };
