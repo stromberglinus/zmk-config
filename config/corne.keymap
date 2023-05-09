@@ -31,9 +31,9 @@
     UC_MODMORPH(name, &name ## _lower, &name ## _upper)
 
 // Define Unicode pairs for Swedish characters
-ZMK_UNICODE_PAIR(ae, 0x00, 0xE4, 0x00, 0xC4) // ä and Ä
-ZMK_UNICODE_PAIR(ao, 0x00, 0xE5, 0x00, 0xC5) // å and Å
-ZMK_UNICODE_PAIR(oe, 0x00, 0xF6, 0x00, 0xD6) // ö and Ö
+ZMK_UNICODE_PAIR(sv_ae,   N0, N0,  E, N4,   N0, N0,  C, N4)
+ZMK_UNICODE_PAIR(sv_ao,   N0, N0,  E, N5,   N0, N0,  C, N5)
+ZMK_UNICODE_PAIR(sv_oe,   N0, N0,  F, N6,   N0, N0,  D, N6)
 
 snapshot: snapshot {
     label = "Win_Shift_S";
