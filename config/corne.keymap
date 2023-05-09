@@ -59,16 +59,16 @@ win_v: win_v {
 
                 Lower_layer {
                         // -------------------------------------------------------------------------------------------------
-                        // [ Tab ][     ][TaskView][    ][    ][Snapsht]     [     ][  7  ][  8  ][  9  ][     ][ Esc ]
-                        // [LSft ][     ][        ][    ][    ][       ]     [  0  ][  4  ][  5  ][  6  ][     ][     ]
-                        // [LCtrl][     ][        ][WinV][    ][       ]     [     ][  1  ][  2  ][  3  ][     ][L Alt]
+                        // [ Tab ][     ][      ][    ][    ][Snapsht]     [     ][  7  ][  8  ][  9  ][     ][ Esc ]
+                        // [LSft ][     ][      ][    ][    ][       ]     [  0  ][  4  ][  5  ][  6  ][     ][     ]
+                        // [LCtrl][     ][      ][    ][WinV][       ]     [     ][  1  ][  2  ][  3  ][     ][L Alt]
                         //                         [    ][Enter][Space]      [Bkspc][ Del ][ Layer3 ]
 
 
                         bindings = <
-                        &kp TAB &none &task_view &none &none  &snapshot        &none  &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none &kp ESCAPE
+                        &kp TAB &none &none &none &none  &snapshot        &none  &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none &kp ESCAPE
                         &kp LEFT_SHIFT &none &none &none &none  &none          &kp NUMBER_0 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &none &none
-                        &kp LEFT_CONTROL &none &none &win_v &none &none         &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none &kp LEFT_ALT 
+                        &kp LEFT_CONTROL &none &none &none &win_v &none         &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none &kp LEFT_ALT 
                                              &none &kp SPACE &kp RETURN        &kp BACKSPACE &kp DEL &mo 3 
                         >;
                 };
@@ -90,16 +90,16 @@ win_v: win_v {
                 
                 Layer_3 {
                         // -------------------------------------------------------------------------------------------------
-                        // [ F1 ][ F2 ][ F3 ][ F4 ][ F5 ][ F6    ]      [  F7  ][  F8  ][  F9 ][ F10 ][ F11 ][ F12 ]
-                        // [LSft][Home][PgDn][PgUp][End ][       ]      [ LEFT ][ DOWN ][RIGHT][  UP ][     ][  L  ]
-                        // [LCtrl][   ][    ][    ][    ][Layer4 ]      [      ][      ][     ][     ][     ][Windows]
-                        //                   [     ][Space][Enter]      [Bkspc][ Del ][     ]
+                        // [ Tab][ F1 ][  F2  ][  F3  ][  F4 ][ F5   ]      [ F6   ][  F7  ][  F8  ][  F9 ][ F10 ][ F11  ]
+                        // [LSft][Home][ PgDn ][ PgUp ][ End ][      ]      [ LEFT ][ DOWN ][RIGHT ][  UP ][     ][  F12 ]
+                        // [LCtrl][   ][     ][TaskView][    ][Layer4]      [      ][      ][     ][     ][  L  ][Windows]
+                        //                        [    ][Space][Enter]      [Bkspc][ Del ][     ]
 
                         bindings = <
-                        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                                 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 
-                        &kp LEFT_SHIFT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &none           &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &kp L 
-                        &kp LEFT_CONTROL &none &none &none &none &mo 4                            &none &none &none &none &none &kp LEFT_GUI   
-                                           &none &kp SPACE &kp RETURN                             &kp BACKSPACE &kp DEL &none
+                        &kp TAB &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                                &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 
+                        &kp LEFT_SHIFT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &none           &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &kp F12  
+                        &kp LEFT_CONTROL &none &none &task_view &none &mo 4                       &none &none &none &none &kp L &kp LEFT_GUI   
+                                             &none &kp SPACE &kp RETURN                           &kp BACKSPACE &kp DEL &none
                         >;
                 };
                 
