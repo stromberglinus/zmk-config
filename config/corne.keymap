@@ -13,29 +13,30 @@
                         // [ Tab ][  Q  ][  W  ][  E  ][  R  ][  T  ]      [  Y  ][  U  ][  I  ][  O  ][  P  ][ Esc ]
                         // [LSft ][  A  ][  S  ][  D  ][  F  ][  G  ]      [  H  ][  J  ][  K  ][  L  ][ ; : ][ ' " ]
                         // [LCtrl][  Z  ][  X  ][  C  ][  V  ][  B  ]      [  N  ][  M  ][ , < ][ . > ][ / ? ][L Alt]
-                        //                      [Lower][Enter][Space]      [Bkspc][ Del ][Raise]
+                        //                      [Lower][Space][Enter]      [Bkspc][ Del ][Raise]
 
 
                         bindings = <
                         &kp TAB &kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U &kp I &kp O &kp P &kp ESCAPE 
                         &kp LEFT_SHIFT &kp A &kp S &kp D &kp F &kp G    &kp H &kp J &kp K &kp L &kp SEMI  &kp SQT 
                         &kp LEFT_CONTROL &kp Z &kp X &kp C &kp V &kp B  &kp N &kp M &kp COMMA &kp DOT  &kp FSLH  &kp LEFT_ALT 
-                                        &mo 1 &kp RETURN &kp SPACE      &kp BACKSPACE &kp DEL &mo 2 
+                                        &mo 1 &kp SPACE &kp RETURN       &kp BACKSPACE &kp DEL &mo 2 
                         >;
                 };
 
                 Lower_layer {
                         // -------------------------------------------------------------------------------------------------
-                        // [ Tab ][     ][  7  ][  8  ][  9  ][     ]      [  F1  ][  F2  ][  F3 ][ F4  ][ F5  ][ F6  ]
-                        // [LSft ][     ][  4  ][  5  ][  6  ][  0  ]      [ LEFT ][ DOWN ][RIGHT][  UP ][     ][     ]
-                        // [LCtrl][     ][  1  ][  2  ][  3  ][     ]      [  F7  ][ F8   ][ F9  ][ F10 ][ F11 ][ F12 ]
-                        //                      [     ][Enter][Space]      [ Home ][  End ][ Layer3 ]
+                        // [ Tab ][     ][     ][     ][     ][     ]      [     ][  7  ][  8  ][  9  ][     ][ Esc ]
+                        // [LSft ][     ][     ][     ][     ][     ]      [  0  ][  4  ][  5  ][  6  ][     ][     ]
+                        // [LCtrl][     ][     ][     ][     ][     ]      [     ][  1  ][  2  ][  3  ][     ][L Alt]
+                        //                       [    ][Enter][Space]      [Bkspc][ Del ][ Layer3 ]
+
 
                         bindings = <
-                        &kp TAB &none &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none                   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 
-                        &kp LEFT_SHIFT &none &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_0     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none 
-                        &kp LEFT_CONTROL &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none          &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 
-                                                                &none &kp RETURN &kp SPACE           &kp HOME &kp END &mo 3
+                        &kp TAB &none &none &none &none  &none                 &none  &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none &kp ESCAPE
+                        &kp LEFT_SHIFT &none &none &none &none  &none          &kp NUMBER_0 &none &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &none 
+                        &kp LEFT_CONTROL &none &none &none &none  &none        &none &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp LEFT_ALT 
+                                             &none &kp SPACE &kp RETURN        &kp BACKSPACE &kp DEL &mo 3 
                         >;
                 };
 
@@ -44,27 +45,42 @@
                         // [ Tab ][  ?  ][  ~  ][  #  ][  $  ][  (  ]      [  )  ][  &  ][  -  ][  _  ][     ][ Esc ]
                         // [LSft ][  !  ][  @  ][  ^  ][  %  ][  {  ]      [  }  ][  *  ][  +  ][  =  ][  :  ][  "  ]
                         // [LCtrl][  \  ][  |  ][     ][  <  ][  [  ]      [  ]  ][  >  ][     ][     ][  /  ][L Alt]
-                        //                      [     ][Enter][Space]      [Bkspc][ Del ][     ]
+                        //                   [ Layer3 ][Space][Enter]      [Bkspc][ Del ][     ]
 
                         bindings = <
-                        &kp TAB &kp QUESTION &kp TILDE &kp HASH &kp DOLLAR &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS &kp AMPERSAND &kp MINUS &kp UNDERSCORE &none &kp ESCAPE 
-                        &kp LEFT_SHIFT &kp EXCLAMATION &kp AT_SIGN &kp CARET &kp PERCENT &kp LEFT_BRACE  &kp RIGHT_BRACE &kp ASTERISK &kp PLUS &kp EQUAL &kp COLON &kp DOUBLE_QUOTES 
-                        &kp LEFT_CONTROL &kp BACKSLASH &kp PIPE &none &kp LT &kp LEFT_BRACKET           &kp RIGHT_BRACKET &kp GT &none &none &kp SLASH &kp LEFT_ALT 
-                                                                &none &kp RETURN &kp SPACE              &kp BACKSPACE &kp DEL &none 
+                        &kp TAB &kp QUESTION &kp TILDE &kp HASH &kp DOLLAR &kp LEFT_PARENTHESIS           &kp RIGHT_PARENTHESIS &kp AMPERSAND &kp MINUS &kp UNDERSCORE &none &kp ESCAPE 
+                        &kp LEFT_SHIFT &kp EXCLAMATION &kp AT_SIGN &kp CARET &kp PERCENT &kp LEFT_BRACE   &kp RIGHT_BRACE &kp ASTERISK &kp PLUS &kp EQUAL &kp COLON &kp DOUBLE_QUOTES 
+                        &kp LEFT_CONTROL &kp BACKSLASH &kp PIPE &none &kp LT &kp LEFT_BRACKET             &kp RIGHT_BRACKET &kp GT &none &none &kp SLASH &kp LEFT_ALT 
+                                                                   &mo 3 &kp SPACE &kp RETURN             &kp BACKSPACE &kp DEL &none 
                         >;
                 };
-
+                
                 Layer_3 {
                         // -------------------------------------------------------------------------------------------------
-                        // [ Tab ][ BTCLR ][ BT0 ][ BT1 ][ BT2 ][ BT3 ]      [     ][     ][     ][     ][     ][Windows]
-                        // [LSft ][       ][     ][     ][     ][BTNXT]      [     ][     ][     ][  L  ][     ][     ]
+                        // [ F1 ][ F2 ][ F3 ][ F4 ][ F5 ][ F6    ]      [ F7 ][ F8 ][ F9 ][ F10 ][ F11 ][ F12 ]
+                        // [LSft][Home][PgDn][PgUp][End ][       ]      [ LEFT ][ DOWN ][RIGHT][  UP ][     ][  L  ]
+                        // [LCtrl][    ][    ][    ][    ][Layer4]      [     ][      ][     ][     ][     ][Windows]
+                        //                 [     ][Space][Enter]      [Bkspc][ Del ][     ]
+
+                        bindings = <
+                        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                   &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 
+                        &kp LEFT_SHIFT &kp HOME &none &none &kp END &none           &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &kp L 
+                        &kp LEFT_CONTROL &none &none &none &none &mo 4              &none &none &none &none &none &kp LEFT_GUI   
+                                           &none &kp SPACE &kp RETURN               &kp BACKSPACE &kp DEL &none
+                        >;
+                };
+                
+                Layer_4 {
+                        // -------------------------------------------------------------------------------------------------
+                        // [ Tab ][ BTCLR ][ BT0 ][ BT1 ][ BT2 ][ BT3 ]      [     ][     ][     ][     ][     ][     ]
+                        // [LSft ][       ][     ][     ][     ][BTNXT]      [     ][     ][     ][     ][     ][     ]
                         // [LCtrl][OUTBLE][OUTUSB][     ][     ][     ]      [     ][     ][     ][     ][     ][L Alt]
                         //                         [    ][Enter][Space]      [Bkspc][ Del ][    ]
 
 
                         bindings = <
-                        &kp TAB &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3     &none &none &none &none &none &kp LEFT_GUI 
-                        &kp LEFT_SHIFT &none &none &none &none &bt BT_NXT                          &none &none &none &kp L &none  &none 
+                        &kp TAB &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3     &none &none &none &none &none &none
+                        &kp LEFT_SHIFT &none &none &none &none &bt BT_NXT                          &none &none &none &none &none  &none 
                         &kp LEFT_CONTROL &out OUT_BLE &out OUT_USB &none &none &none               &none &none &none &none  &none  &kp LEFT_ALT 
                                              &none &kp RETURN &kp SPACE                            &kp BACKSPACE &kp DEL &none 
                         >;
