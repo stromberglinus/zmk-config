@@ -3,9 +3,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+
 / {
 
-sv_ae_lower: sv_ae_lower {
+ae_lower: ae_lower {
         compatible = "zmk,behavior-macro";
         label = "sv_ae_lower";
         wait-ms = <0>;
@@ -14,7 +15,7 @@ sv_ae_lower: sv_ae_lower {
         bindings = <&kp LCTRL &kp LSHFT &kp U>, <&macro_tap &kp N0 &kp N0 &kp E &kp N4>, <&kp LCTRL &kp LSHFT>;
     };
     
-sv_ae_upper: sv_ae_upper {
+oe_upper: oe_upper {
 compatible = "zmk,behavior-macro";
 label = "sv_ae_upper";
 wait-ms = <0>;
@@ -23,7 +24,7 @@ tap-ms = <0>;
 bindings = <&kp LCTRL &kp LSHFT &kp U>, <&macro_tap &kp N0 &kp N0 &kp C &kp N4>, <&kp LCTRL &kp LSHFT>;
 };
 
-sv_ao_lower: sv_ao_lower {
+ao_lower: ao_lower {
 compatible = "zmk,behavior-macro";
 label = "sv_ao_lower";
 wait-ms = <0>;
