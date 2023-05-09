@@ -15,7 +15,7 @@ ae_lower: ae_lower {
         bindings = <&kp LCTRL &kp LSHFT &kp U>, <&macro_tap &kp N0 &kp N0 &kp E &kp N4>, <&kp LCTRL &kp LSHFT>;
     };
     
-oe_upper: oe_upper {
+oe_lower: oe_lower {
 compatible = "zmk,behavior-macro";
 label = "sv_ae_upper";
 wait-ms = <0>;
