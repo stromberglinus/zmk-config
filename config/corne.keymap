@@ -8,6 +8,7 @@
 // Define OS_UNICODE_LEAD and OS_UNICODE_TRAIL for Windows
 #define OS_UNICODE_LEAD &kp LCTRL &kp LSHFT &kp U
 #define OS_UNICODE_TRAIL &kp LCTRL &kp LSHFT
+#define ZMK_HELPER_STRINGIFY(x) #x
 
 // Define UC_MACRO
 #define UC_MACRO(name, unicode_bindings) \
