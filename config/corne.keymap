@@ -5,6 +5,17 @@
 
 / {
 
+snapshot: snapshot {
+    label = "Win_Shift_S";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_press &kp LGUI &kp LSHFT>
+        , <&macro_tap &kp S>
+        , <&macro_release &kp LGUI &kp LSHFT>
+        ;
+};
+
   keymap {
     compatible = "zmk,keymap";
 
@@ -26,16 +37,16 @@
 
                 Lower_layer {
                         // -------------------------------------------------------------------------------------------------
-                        // [ Tab ][     ][     ][     ][     ][     ]      [     ][  7  ][  8  ][  9  ][     ][ Esc ]
-                        // [LSft ][     ][     ][     ][     ][     ]      [  0  ][  4  ][  5  ][  6  ][     ][     ]
-                        // [LCtrl][     ][     ][     ][     ][     ]      [     ][  1  ][  2  ][  3  ][     ][L Alt]
-                        //                       [    ][Enter][Space]      [Bkspc][ Del ][ Layer3 ]
+                        // [ Tab ][     ][     ][     ][     ][      ]      [     ][  7  ][  8  ][  9  ][     ][ Esc ]
+                        // [LSft ][     ][     ][     ][     ][      ]      [  0  ][  4  ][  5  ][  6  ][     ][     ]
+                        // [LCtrl][     ][     ][     ][     ][Snapsht]     [     ][  1  ][  2  ][  3  ][     ][L Alt]
+                        //                         [    ][Enter][Space]      [Bkspc][ Del ][ Layer3 ]
 
 
                         bindings = <
                         &kp TAB &none &none &none &none  &none                 &none  &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none &kp ESCAPE
-                        &kp LEFT_SHIFT &none &none &none &none  &none          &kp NUMBER_0 &none &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &none 
-                        &kp LEFT_CONTROL &none &none &none &none  &none        &none &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp LEFT_ALT 
+                        &kp LEFT_SHIFT &none &none &none &none  &none          &kp NUMBER_0 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &none &none
+                        &kp LEFT_CONTROL &none &none &none &none &snapshot     &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none &kp LEFT_ALT 
                                              &none &kp SPACE &kp RETURN        &kp BACKSPACE &kp DEL &mo 3 
                         >;
                 };
