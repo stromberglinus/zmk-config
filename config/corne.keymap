@@ -12,7 +12,7 @@ ae_lower: ae_lower {
         wait-ms = <0>;
         tap-ms = <0>;
         #binding-cells = <0>;
-        bindings = <&kp LCTRL &kp LSHFT &kp U>, <&macro_tap &kp N0 &kp N0 &kp E &kp N4>, <&kp LCTRL &kp LSHFT>;
+        bindings = <&kp LALT>, <&macro_tap &kp N1 &kp N3 &kp N2>, <&kp LALT_RELEASE>;
     };
     
 oe_lower: oe_lower {
@@ -21,7 +21,7 @@ label = "sv_ae_upper";
 wait-ms = <0>;
 tap-ms = <0>;
 #binding-cells = <0>;
-bindings = <&kp LCTRL &kp LSHFT &kp U>, <&macro_tap &kp N0 &kp N0 &kp C &kp N4>, <&kp LCTRL &kp LSHFT>;
+bindings = <&kp LALT>, <&macro_tap &kp N1 &kp N4 &kp N8>, <&kp LALT_RELEASE>;
 };
 
 ao_lower: ao_lower {
@@ -30,7 +30,7 @@ label = "sv_ao_lower";
 wait-ms = <0>;
 tap-ms = <0>;
 #binding-cells = <0>;
-bindings = <&kp LCTRL &kp LSHFT &kp U>, <&macro_tap &kp N0 &kp N0 &kp E &kp N5>, <&kp LCTRL &kp LSHFT>;
+bindings = <&kp LALT>, <&macro_tap &kp N1 &kp N3 &kp N4>, <&kp LALT_RELEASE>;
 };
 
 snapshot: snapshot {
