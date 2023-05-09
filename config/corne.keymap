@@ -2,34 +2,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include "swedish_unicode.h"
 
 / {
-
-// Define OS_UNICODE_LEAD and OS_UNICODE_TRAIL for Windows
-#define OS_UNICODE_LEAD &kp LCTRL &kp LSHFT &kp U
-#define OS_UNICODE_TRAIL &kp LCTRL &kp LSHFT
-#define ZMK_HELPER_STRINGIFY(x) #x
-
-// Define UC_MACRO
-#define UC_MACRO(name, unicode_bindings) \
-    / { \
-        macros { \
-            name: name { \
-                compatible = "zmk,behavior-macro"; \
-                label = ZMK_HELPER_STRINGIFY(UC_MACRO_ ## name); \
-                wait-ms = <0>; \
-                tap-ms = <0>; \
-                #binding-cells = <0>; \
-                bindings = <OS_UNICODE_LEAD>, <&macro_tap unicode_bindings>, <OS_UNICODE_TRAIL>; \
-            }; \
-        }; \
-    };
-
-// Define ZMK_UNICODE_PAIR
-#define ZMK_UNICODE_PAIR(name, L0, L1, L2, L3, U0, U1, U2, U3) \
-    UC_MACRO(name ## _lower, &kp L0 &kp L1 &kp L2 &kp L3) \
-    UC_MACRO(name ## _upper, &kp U0 &kp U1 &kp U2 &kp U3) \
-    UC_MODMORPH(name, &name ## _lower, &name ## _upper)
 
 // Define Unicode pairs for Swedish characters
 ZMK_UNICODE_PAIR(sv_ae,   N0, N0,  E, N4,   N0, N0,  C, N4)
