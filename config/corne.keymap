@@ -38,9 +38,9 @@
                         //                       [     ][Enter][Space ]     [Bkspc][ Del ][ Layer3 ]
                         label = "NUM";
                         bindings = <
-                        &kp TAB &none &none &none &none  &snapshot                    &none  &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none &kp ESCAPE
+                        &kp TAB &none &none &none &none  &none                    &none  &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none &kp ESCAPE
                         &kp LEFT_SHIFT &none &none &none &none  &none                 &kp NUMBER_0 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &none &none
-                        &kp LEFT_CONTROL &none &none &none &win_v &none               &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none &kp LEFT_ALT 
+                        &kp LEFT_CONTROL &none &none &none &none &none               &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none &kp LEFT_ALT 
                                              &none &kp SPACE &kp RETURN               &kp BACKSPACE &kp DEL &mo 3 
                         >;
                 };
@@ -70,7 +70,7 @@
                         bindings = <
                         &kp TAB &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                                &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 
                         &kp LEFT_SHIFT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &none           &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &kp F12  
-                        &kp LEFT_CONTROL &none &none &task_view &none &mo 4                       &none &none &none &none &kp L &kp LEFT_GUI   
+                        &kp LEFT_CONTROL &none &none &none &none &mo 4                       &none &none &none &none &kp L &kp LEFT_GUI   
                                              &none &kp SPACE &kp RETURN                           &kp BACKSPACE &kp DEL &none
                         >;
                 };
