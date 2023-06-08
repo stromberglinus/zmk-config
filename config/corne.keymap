@@ -62,7 +62,7 @@
                 arrows_layer {
                         // -------------------------------------------------------------------------------------------------
                         // [ Tab][ F1 ][  F2  ][  F3  ][  F4 ][ F5   ]      [ F6   ][  F7  ][  F8  ][  F9 ][ F10 ][ F11  ]
-                        // [LSft][Home][ PgDn ][ PgUp ][ End ][      ]      [ LEFT ][ DOWN ][RIGHT ][  UP ][     ][  F12 ]
+                        // [LSft][Home][ PgUp ][ PgDn ][ End ][      ]      [ LEFT ][ DOWN ][RIGHT ][  UP ][     ][  F12 ]
                         // [LCtrl][   ][     ][        ][    ][Layer4]      [      ][      ][     ][     ][  L  ][Windows]
                         //                        [    ][Space][Enter]      [Bkspc][ Del ][     ]
                         label = "NAV";
@@ -78,14 +78,14 @@
                         // -------------------------------------------------------------------------------------------------
                         // [ Tab ][ BTCLR ][ BT0 ][ BT1 ][ BT2 ][ BT3 ]      [     ][     ][     ][     ][     ][     ]
                         // [LSft ][       ][     ][     ][     ][BTNXT]      [     ][     ][     ][     ][     ][     ]
-                        // [LCtrl][OUTBLE][OUTUSB][     ][     ][BTPRV]      [     ][     ][     ][     ][     ][L Alt]
+                        // [LCtrl][       ][      ][     ][     ][BTPRV]      [     ][     ][     ][     ][     ][L Alt]
                         //                         [    ][Enter][Space]      [Bkspc][ Del ][    ]
 
                         label = "BT";
                         bindings = <
                         &kp TAB &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3     &none &none &none &none &none &none
                         &kp LEFT_SHIFT &none &none &none &none &bt BT_NXT                          &none &none &none &none &none  &none 
-                        &kp LEFT_CONTROL &out OUT_BLE &out OUT_USB &none &none &bt BT_PRV          &none &none &none &none  &none  &kp LEFT_ALT 
+                        &kp LEFT_CONTROL &none &none &none &none &bt BT_PRV                        &none &none &none &none  &none  &kp LEFT_ALT 
                                              &none &kp RETURN &kp SPACE                            &kp BACKSPACE &kp DEL &none 
                         >;
                 };
