@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 
 / {
 
@@ -32,9 +31,9 @@
 
                 number_layer {
                         // -------------------------------------------------------------------------------------------------
-                        // [ Tab ][  å  ][   ä  ][  ö  ][    ][Snapsht]     [     ][  7  ][  8  ][  9  ][     ][ Esc ]
+                        // [ Tab ][     ][      ][     ][    ][       ]     [     ][  7  ][  8  ][  9  ][     ][ Esc ]
                         // [LSft ][     ][      ][     ][    ][       ]     [  0  ][  4  ][  5  ][  6  ][     ][     ]
-                        // [LCtrl][     ][      ][     ][WinV][       ]     [     ][  1  ][  2  ][  3  ][     ][L Alt]
+                        // [LCtrl][     ][      ][     ][    ][       ]     [     ][  1  ][  2  ][  3  ][     ][L Alt]
                         //                       [     ][Enter][Space ]     [Bkspc][ Del ][ Layer3 ]
                         label = "NUM";
                         bindings = <
@@ -64,7 +63,7 @@
                         // -------------------------------------------------------------------------------------------------
                         // [ Tab][ F1 ][  F2  ][  F3  ][  F4 ][ F5   ]      [ F6   ][  F7  ][  F8  ][  F9 ][ F10 ][ F11  ]
                         // [LSft][Home][ PgDn ][ PgUp ][ End ][      ]      [ LEFT ][ DOWN ][RIGHT ][  UP ][     ][  F12 ]
-                        // [LCtrl][   ][     ][TaskView][    ][Layer4]      [      ][      ][     ][     ][  L  ][Windows]
+                        // [LCtrl][   ][     ][        ][    ][Layer4]      [      ][      ][     ][     ][  L  ][Windows]
                         //                        [    ][Space][Enter]      [Bkspc][ Del ][     ]
                         label = "NAV";
                         bindings = <
