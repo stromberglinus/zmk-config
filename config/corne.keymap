@@ -7,40 +7,110 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define DEFAULT_L 0
+#define NUMBERS_L 1
+#define SYMBOLS_L 2
+#define ARROWS_L  3
+#define BLUETOOTH_L  4
+
+
+
 
 / {
 
+        ao_lower: ao_lower {
+        compatible = "zmk,behavior-macro";
+        label = "sv_ao_lower";
+        wait-ms = <0>;
+        tap-ms = <0>;
+        #binding-cells = <0>;
+        bindings = <&macro_press &kp LEFT_ALT >, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N9>, <&macro_release &kp LEFT_ALT>;
+        };
+
+        ae_lower: ae_lower {
+                compatible = "zmk,behavior-macro";
+                label = "sv_ae_lower";
+                wait-ms = <0>;
+                tap-ms = <0>;
+                #binding-cells = <0>;
+                bindings = <&macro_press &kp LEFT_ALT >, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>, <&macro_release &kp LEFT_ALT>;
+        };  
+
+        oe_lower: oe_lower {
+        compatible = "zmk,behavior-macro";
+        label = "sv_ae_upper";
+        wait-ms = <0>;
+        tap-ms = <0>;
+        #binding-cells = <0>;
+        bindings = <&macro_press &kp LEFT_ALT >, <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_NUMBER_4 &kp KP_N6>, <&macro_release &kp LEFT_ALT>;
+        };
+
+        snapshot: snapshot {
+            label = "Win_Shift_S";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI &kp LSHFT>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LGUI &kp LSHFT>
+                ;
+        };
+
+        task_view: task_view {
+            label = "Task_View";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LGUI>
+                ;
+        }; 
+
+        win_v: win_v {
+            label = "Win_V";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+
   keymap {
-        compatible = "zmk,keymap";
+    compatible = "zmk,keymap";
 
                default_layer {
                         // -------------------------------------------------------------------------------------------------
                         // [ Tab ][  Q  ][  W  ][  E  ][  R  ][  T  ]      [  Y  ][  U  ][  I  ][  O  ][  P  ][ Esc ]
                         // [LSft ][  A  ][  S  ][  D  ][  F  ][  G  ]      [  H  ][  J  ][  K  ][  L  ][ ; : ][ ' " ]
                         // [LCtrl][  Z  ][  X  ][  C  ][  V  ][  B  ]      [  N  ][  M  ][ , < ][ . > ][ / ? ][L Alt]
-                        //                      [Lower][Space][Enter]      [Bkspc][ Del ][Raise]
+                        //                        [NUM][Space][Enter]      [Bkspc][ Del ][SYMB]
 
                         label = "DEF";
                         bindings = <
                         &kp TAB &kp Q &kp W &kp E &kp R &kp T            &kp Y &kp U &kp I &kp O &kp P &kp ESCAPE 
                         &kp LEFT_SHIFT &kp A &kp S &kp D &kp F &kp G     &kp H &kp J &kp K &kp L &kp SEMI  &kp SQT 
                         &kp LEFT_CONTROL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA &kp DOT  &kp FSLH  &kp LEFT_ALT 
-                                            &mo 1 &kp SPACE &kp RETURN   &kp BACKSPACE &kp DEL &mo 2 
+                                    &mo NUMBERS_L &kp SPACE &kp RETURN   &kp BACKSPACE &kp DEL &mo SYMBOLS_L
                         >;
                 };
 
                 number_layer {
                         // -------------------------------------------------------------------------------------------------
-                        // [ Tab ][     ][      ][     ][    ][       ]     [     ][  7  ][  8  ][  9  ][     ][ Esc ]
+                        // [ Tab ][  å  ][   ä  ][  ö  ][    ][Snapsht]     [     ][  7  ][  8  ][  9  ][     ][ Esc ]
                         // [LSft ][     ][      ][     ][    ][       ]     [  0  ][  4  ][  5  ][  6  ][     ][     ]
-                        // [LCtrl][     ][      ][     ][    ][       ]     [     ][  1  ][  2  ][  3  ][     ][L Alt]
-                        //                       [     ][Enter][Space ]     [Bkspc][ Del ][ Layer3 ]
+                        // [LCtrl][     ][      ][     ][WinV][       ]     [     ][  1  ][  2  ][  3  ][     ][L Alt]
+                        //                       [     ][Enter][Space ]     [Bkspc][ Del ][ NAV ]
                         label = "NUM";
                         bindings = <
-                        &kp TAB &none &none &none &none  &none                    &none  &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none &kp ESCAPE
+                        &kp TAB &ao_lower &ae_lower &oe_lower &none  &snapshot        &none  &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &none &kp ESCAPE
                         &kp LEFT_SHIFT &none &none &none &none  &none                 &kp NUMBER_0 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &none &none
-                        &kp LEFT_CONTROL &none &none &none &none &none               &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none &kp LEFT_ALT 
-                                             &none &kp SPACE &kp RETURN               &kp BACKSPACE &kp DEL &mo 3 
+                        &kp LEFT_CONTROL &none &none &none &win_v &none               &none &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &none &kp LEFT_ALT 
+                                             &none &kp SPACE &kp RETURN               &kp BACKSPACE &kp DEL &mo ARROWS_L 
                         >;
                 };
 
@@ -49,43 +119,43 @@
                         // [ Tab ][  ?  ][  ~  ][  #  ][  $  ][  (  ]      [  )  ][  &  ][  -  ][  _  ][  ^  ][ Esc ]
                         // [LSft ][  !  ][  @  ][     ][  %  ][  {  ]      [  }  ][  *  ][  +  ][  =  ][  :  ][  "  ]
                         // [LCtrl][  \  ][  |  ][     ][  <  ][  [  ]      [  ]  ][  >  ][     ][     ][  /  ][L Alt]
-                        //                   [ Layer3 ][Space][Enter]      [Bkspc][ Del ][     ]
+                        //                      [ NAV ][Space][Enter]      [Bkspc][ Del ][     ]
                         label = "SYMB";
                         bindings = <
                         &kp TAB &kp QUESTION &kp TILDE &kp HASH &kp DOLLAR &kp LEFT_PARENTHESIS           &kp RIGHT_PARENTHESIS &kp AMPERSAND &kp MINUS &kp UNDERSCORE &kp CARET &kp ESCAPE 
                         &kp LEFT_SHIFT &kp EXCLAMATION &kp AT_SIGN &none &kp PERCENT &kp LEFT_BRACE       &kp RIGHT_BRACE &kp ASTERISK &kp PLUS &kp EQUAL &kp COLON &kp DOUBLE_QUOTES 
                         &kp LEFT_CONTROL &kp BACKSLASH &kp PIPE &none &kp LT &kp LEFT_BRACKET             &kp RIGHT_BRACKET &kp GT &none &none &kp SLASH &kp LEFT_ALT 
-                                                                   &mo 3 &kp SPACE &kp RETURN             &kp BACKSPACE &kp DEL &none 
+                                                            &mo ARROWS_L &kp SPACE &kp RETURN             &kp BACKSPACE &kp DEL &none 
                         >;
                 };
                 
                 arrows_layer {
                         // -------------------------------------------------------------------------------------------------
                         // [ Tab][ F1 ][  F2  ][  F3  ][  F4 ][ F5   ]      [ F6   ][  F7  ][  F8  ][  F9 ][ F10 ][ F11  ]
-                        // [LSft][Home][ PgUp ][ PgDn ][ End ][      ]      [ LEFT ][ DOWN ][RIGHT ][  UP ][     ][  F12 ]
-                        // [LCtrl][   ][     ][        ][    ][Layer4]      [      ][      ][     ][     ][  L  ][Windows]
+                        // [LSft][Home][ PgDn ][ PgUp ][ End ][      ]      [ LEFT ][ DOWN ][RIGHT ][  UP ][     ][  F12 ]
+                        // [LCtrl][   ][     ][TaskView][    ][  BT  ]      [      ][      ][     ][     ][  L  ][Windows]
                         //                        [    ][Space][Enter]      [Bkspc][ Del ][     ]
                         label = "NAV";
                         bindings = <
                         &kp TAB &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                                &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 
                         &kp LEFT_SHIFT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &none           &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &kp F12  
-                        &kp LEFT_CONTROL &none &none &none &none &mo 4                       &none &none &none &none &kp L &kp LEFT_GUI   
+                        &kp LEFT_CONTROL &none &none &task_view &none &mo BLUETOOTH_L             &none &none &none &none &kp L &kp LEFT_GUI   
                                              &none &kp SPACE &kp RETURN                           &kp BACKSPACE &kp DEL &none
                         >;
                 };
                 
                 bluetooth_layer {
                         // -------------------------------------------------------------------------------------------------
-                        // [ Tab ][ BTCLR ][ BT0 ][ BT1 ][ BT2 ][ BT3 ]      [     ][     ][     ][     ][     ][     ]
-                        // [LSft ][       ][     ][     ][     ][BTNXT]      [     ][     ][     ][     ][     ][     ]
-                        // [LCtrl][       ][      ][     ][     ][BTPRV]      [     ][     ][     ][     ][     ][L Alt]
+                        // [ Tab ][ BTCLR ][ BT0 ][ BT1 ][ BT2 ][ BT3 ]      [     ][     ][     ][        ][     ][     ]
+                        // [LSft ][       ][     ][     ][     ][BTNXT]      [     ][OUTBLE][OUTUSB][OUTTOG][     ][     ]
+                        // [LCtrl][       ][     ][     ][     ][BTPRV]      [     ][     ][     ][        ][     ][L Alt]
                         //                         [    ][Enter][Space]      [Bkspc][ Del ][    ]
 
                         label = "BT";
                         bindings = <
                         &kp TAB &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3     &none &none &none &none &none &none
-                        &kp LEFT_SHIFT &none &none &none &none &bt BT_NXT                          &none &none &none &none &none  &none 
-                        &kp LEFT_CONTROL &none &none &none &none &bt BT_PRV                        &none &none &none &none  &none  &kp LEFT_ALT 
+                        &kp LEFT_SHIFT &none &none &none &none &bt BT_NXT                          &none &out OUT_BLE &out OUT_USB &out OUT_TOG &none  &none 
+                        &kp LEFT_CONTROL &none &none &non &none &bt BT_PRV                         &none &none &none &none  &none  &kp LEFT_ALT 
                                              &none &kp RETURN &kp SPACE                            &kp BACKSPACE &kp DEL &none 
                         >;
                 };
